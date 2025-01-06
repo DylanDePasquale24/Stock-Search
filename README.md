@@ -1,6 +1,28 @@
 # Stock Search
 ## Description
-Stock Search is a C++ console application that analyzes stock data from the Dow 30 index and yields the top best (or worst) performing days for a selected criteria. It incorporates 5 years of market data, totalling to over 260,000 data points. We incorporated both heap and merge sort algorithms to understand performance disparities across different ways of structuring data sets.
+Stock Search is an easy-to-use console application for searching notable stock records based off of 4 primary criteria: best returns, worst returns, most volatile, and least volatile. This information can be used to help gain more insight into past stock performances and volatility to provide for more informed future stock purchases. 
 
-**Team:** 
-Dylan DePasquale, Richard Qian, Douglas Ta
+Our application also measures performance variations between two customly built sorting methods: heap sort and merge sort.
+
+Created by Dylan DePasquale, Richard Qian, and Douglas Ta
+
+## Build/Run the Application in Terminal
+
+### Clone the repository
+1. Clone the repo into your local machine using the following command in the terminal: 
+    ```console
+    git clone https://github.com/DylanDePasquale24/Stock-Search.git
+    ```
+### Build the Executable
+ 1. Navigate to the project directory and use the g++ compiler to build an executable:
+    ```console
+    cd Stock-Search/Project3
+    g++ -o Stock-Search_Program *.cpp
+    ```
+### Running and Using the CLI
+1. Run the executable: 
+    ```console
+      Stock-Search_Program.exe
+    ```
+
+2. The CLI will prompt you to enter the stocks you would like to search from as well as the desired date range and criteria.
