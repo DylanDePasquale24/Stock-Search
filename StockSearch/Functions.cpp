@@ -12,7 +12,7 @@ void PrintWelcomeMsg() {
 
     cout << "Please enter a valid stock ticker from the Dow 30." << endl;
     cout << "Refer to \'cnbc.com/dow-30\' for available stocks." << endl << endl;
-    cout << "Enter all the stocks you want to search. Type \"DONE\" when you are finished." << endl;
+    cout << "Enter the first stock you would like to include in your search." << endl;
 }
 void EnterStocks(vector<Stock*>& chosenStocks) {
 
@@ -48,7 +48,7 @@ void EnterStocks(vector<Stock*>& chosenStocks) {
         }
 
         if (ticker != "DONE") {
-            cout << "Would you like to input another stock? Type \"DONE\" if you're finished." << endl;
+            cout << "Would you like to input another stock? If not, enter \"DONE\" if you are finished." << endl;
         }
 
     }
@@ -60,9 +60,9 @@ pair<int, int> EnterDates(vector<Stock*>& chosenStocks) {
     Stock* stockPtr = chosenStocks[0];
 
     cout << endl
-        << "You will now be asked for two dates which will serve as a range in which your data will be searched"
+        << "You will now be for two successive dates that will serve as a range for which your data will be searched"
         << endl;
-    cout << "Data is available from 2017-04-03 to 2022-03-31. Only valid ranges are accepted." << endl << endl;
+    cout << "Stock data is available from 2017-04-03 to 2022-03-31. Only valid date ranges are accepted." << endl << endl;
 
     while (check) {
 
@@ -114,10 +114,10 @@ int MenuSelection(int& numDays, int numStocks) {
 
     while (check) {
         cout << "Please select one of the following criteria to search for." << endl;
-        cout << "1. Most Returns" << endl;
-        cout << "2. Least Returns (Most Losses)" << endl;
-        cout << "3. Most Net Change (Measure for Volatility)" << endl;
-        cout << "4. Least Net Change (Measure for Stability)" << endl;
+        cout << "1. Highest % Returns" << endl;
+        cout << "2. Highest % Losses" << endl;
+        cout << "3. Highest Daily Change (Measure for Volatility)" << endl;
+        cout << "4. Lowest Daily Change (Measure for Stability)" << endl;
         cin >> menuSelection;
         if (menuSelection <= 0 || menuSelection > 4) {
             cout << "Invalid input!" << endl;
@@ -128,7 +128,7 @@ int MenuSelection(int& numDays, int numStocks) {
         //the problem is the date range. 
         bool check2 = true;
         while (check2) {
-            cout << "Please input the number of days you want to search for. (i.e. Top X days with most returns)" << endl;
+            cout << "Please input the number of days you want to search for. (i.e. Top X days with most/worst returns)" << endl;
             cin >> numDays;
             
             if (numDays > 1000 || numDays < 1) {
