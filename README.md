@@ -16,7 +16,7 @@ Created by Dylan DePasquale, Richard Qian, and Douglas Ta
 ### Build the Executable
  1. Navigate to the project directory and use the g++ compiler to build an executable:
     ```console
-    cd Stock-Search/Project3
+    cd Stock-Search/StockSearch
     g++ -o Stock-Search_Program *.cpp
     ```
 ### Running and Using the CLI
